@@ -1,61 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div id="interface">
+    <div id="infoInput">
+      <h1>Mortgage Calculator</h1>
 
-  Mortgage Calculator
-  Clear All
+      <form action="" id="myForm" method="post">
+        <button type="reset" id="btnClearAll">Clear All</button>
 
-  Mortgage Amount
+        <fieldset class="borderHidden">
+          <legend class="visually-hidden" id="mortgageAmountLabel">Mortgage Amount</legend>
+          <p>
+            <label for="imortgageAmount">Mortgage Amount</label>
+            <input type="number" name="mortgageAmount" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" required>
 
-  Mortgage Term
+            <br>
 
-  Interest Rate
+            <span class="error" id="mortgageAmountError" aria-live="polite">This field is required</span>
+          </p>
+        </fieldset>
 
-  Mortgage Type
-  Repayment
-  Interest Only
+        <fieldset class="borderHidden">
+          <legend class="visually-hidden" id="mortgageTermLabel">Mortgage Term</legend>
+          <p>
+            <label for="imortgageTerm">Mortgage Term</label>
+            <input type="number" name="mortgageTerm" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
 
-  Calculate Repayments
+            <br>
 
-  <!-- Empty results start -->
+            <span class="error" id="mortgageTermError" aria-live="polite">This fiels is required</span>
+          </p>
+        </fieldset>
 
-  Results shown here
+        <fieldset class="borderHidden">
+          <legend class="visually-hidden" id="interestRateLabel">Interest Rate</legend>
+          <p>
+            <label for="iinterestRate">Interest Rate</label>
+            <input type="number" name="interestRate" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
 
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
+            <br>
 
-  <!-- Empty results end -->
+            <span class="error" id="interestRateError" aria-live="polite">This field is required</span>
+          </p>
+        </fieldset>
 
-  <!-- Completed results start -->
+        <fieldset class="borderHidden">
+          <legend class="visually-hidden" id="mortgageTypeLabel">Mortgage Type</legend>
+          <p>
+            <input type="radio" name="MortgageType" id="irepayment" aria-labelledby="mortgageTypeLabel" aria-describedby="mortgageTypeError" required>
+            <label for="irepayment">Repayment</label>
 
-  Your results
+            <input type="radio" name="MortgageType" id="iinterestOnly" aria-labelledby="mortgageTypeLabel" aria-describedby="mortgageTypeError" required>
+            <label for="iinterestOnly">Interest Only</label>
 
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
+            <br>
 
-  Your monthly repayments
+            <span class="error" id="mortgageTypeError">This field is required</span>
+          </p>
+          </fieldset>
 
-  Total you'll repay over the term
+        <button type="submit" id="btnSubmit">Calculate Repayments</button>
+      </form>
+    </div>
+    <!-- Empty results start -->
 
-  <!-- Completed results end -->
-  
+    Results shown here
+
+    Complete the form and click “calculate repayments” to see what
+    your monthly repayments would be.
+
+    <!-- Empty results end -->
+
+    <!-- Completed results start -->
+
+    Your results
+
+    Your results are shown below based on the information you provided.
+    To adjust the results, edit the form and click “calculate repayments” again.
+
+    Your monthly repayments
+
+    Total you'll repay over the term
+
+    <!-- Completed results end -->
+
+  </div>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
