@@ -7,19 +7,9 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/style.css">
 
   <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -85,27 +75,29 @@
       </form>
     </div>
 
-    <div id="empty">
-      <img src="src/assets/images/illustration-empty.svg" alt="Illustration Empty">
-      <h2>Results shown here</h2>
+    <div id="resu">
+      <div id="emptyResu">
+        <img src="src/assets/images/illustration-empty.svg" alt="Illustration Empty">
+        <h2>Results shown here</h2>
 
-      <p>
-        Complete the form and click “calculate repayments” to see what your monthly repayments would be.
-      </p>
-    </div>
-   
-    <div id="completedResu" style="display: none;">
-      <h2>Your results</h2>
-      
-      <p>
-        Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
-      </p>
+        <p>
+          Complete the form and click “calculate repayments” to see what your monthly repayments would be.
+        </p>
+      </div>
+    
+      <div id="completedResu">
+        <h2>Your results</h2>
+        
+        <p>
+          Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
 
-      <p>Your monthly repayments</p>
-      <p class="resu">empty</p>
+        <p>Your monthly repayments</p>
+        <p id="monthlyResu" class="resu">empty</p>
 
-      <p>Total you'll repay over the term</p>
-      <p class="resu">empty</p>
+        <p>Total you'll repay over the term</p>
+        <p id="repayResu" class="resu">empty</p>
+      </div>
     </div>
   </div>
 

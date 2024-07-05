@@ -1,0 +1,60 @@
+@use 'variables';
+@use 'mixins';
+@import url('https://fonts.google.com/specimen/Plus+Jakarta+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#interface {
+    #infoInput {
+        form {
+            .borderHidden {
+                border: none;
+            }
+            
+            .visually-hidden {
+                display: none;
+            }
+    
+            .error {
+                color: variables.$red;
+                display: none;
+            }
+        }
+    }
+    
+    #resu {
+        background-color: variables.$slate900;
+        color: variables.$white;
+        
+        p {
+            color: variables.$slate300;
+        }
+
+        #completedResu {
+            display: block;
+
+            #monthlyResu {
+                color: variables.$lime;
+            }
+
+            #repayResu {
+                color: variables.$white;
+            }
+        } 
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+} 

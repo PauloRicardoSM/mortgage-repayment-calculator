@@ -1,0 +1,43 @@
+@import url("https://fonts.google.com/specimen/Plus+Jakarta+Sans");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#interface #infoInput form .borderHidden {
+  border: none;
+}
+#interface #infoInput form .visually-hidden {
+  display: none;
+}
+#interface #infoInput form .error {
+  color: hsl(4, 69%, 50%);
+  display: none;
+}
+#interface #resu {
+  background-color: hsl(202, 55%, 16%);
+  color: hsl(0, 0%, 100%);
+}
+#interface #resu p {
+  color: hsl(203, 41%, 72%);
+}
+#interface #resu #completedResu {
+  display: block;
+}
+#interface #resu #completedResu #monthlyResu {
+  color: hsl(61, 70%, 52%);
+}
+#interface #resu #completedResu #repayResu {
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
