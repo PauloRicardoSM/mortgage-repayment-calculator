@@ -11,8 +11,34 @@
 }
 
 #interface {
+    padding: 1rem;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    } 
+
     #infoInput {
         form {
+            .displayGrid {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-rows: auto;
+                border: 1px solid variables.$slate900;
+
+                input {
+                    border: none;
+                }
+
+                .rightSymbol {
+                    background-color: variables.$slate100;
+                }
+            }
+
             .borderHidden {
                 border: none;
             }
@@ -24,6 +50,23 @@
             .error {
                 color: variables.$red;
                 display: none;
+            }
+
+            #amountGrid {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                border: 1px solid variables.$slate900;
+                border-radius: 0;
+
+                input {
+                    border: none;
+                }
+
+                #leftSymbol {
+                    grid-column: 1;
+                    grid-row: 1;
+                    background-color: variables.$slate100;
+                }
             }
         }
     }
@@ -49,12 +92,3 @@
         } 
     }
 }
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-
-    a {
-        color: hsl(228, 45%, 44%);
-    }
-} 

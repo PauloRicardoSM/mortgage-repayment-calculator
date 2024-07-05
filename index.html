@@ -24,7 +24,10 @@
           <legend class="visually-hidden" id="mortgageAmountLabel">Mortgage Amount</legend>
           <p>
             <label for="imortgageAmount">Mortgage Amount</label>
-            <input type="number" name="mortgageAmount" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" required>
+            <div id="amountGrid">
+              <input type="number" name="mortgageAmount" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" required>
+              <span id="leftSymbol">$</span>
+            </div>
 
             <br>
 
@@ -36,8 +39,11 @@
           <legend class="visually-hidden" id="mortgageTermLabel">Mortgage Term</legend>
           <p>
             <label for="imortgageTerm">Mortgage Term</label>
-            <input type="number" name="mortgageTerm" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
-
+            <div class="displayGrid">
+              <input type="number" name="mortgageTerm" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
+              <span class="rightSymbol">Years</span>
+            </div>
+            
             <br>
 
             <span class="error" id="mortgageTermError" aria-live="polite">This fiels is required</span>
@@ -46,9 +52,12 @@
 
         <fieldset class="borderHidden">
           <legend class="visually-hidden" id="interestRateLabel">Interest Rate</legend>
-          <p>
+          <p class="inputSymbol">
             <label for="iinterestRate">Interest Rate</label>
-            <input type="number" name="interestRate" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
+            <div class="displayGrid">
+              <input type="number" name="interestRate" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
+              <span class="rightSymbol">%</span>
+            </div>
 
             <br>
 
@@ -99,11 +108,11 @@
         <p id="repayResu" class="resu">empty</p>
       </div>
     </div>
-  </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
 </body>
 </html>
