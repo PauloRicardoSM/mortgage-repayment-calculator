@@ -1,4 +1,4 @@
-@import url("https://fonts.google.com/specimen/Plus+Jakarta+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,17 @@
 }
 #interface .attribution a {
   color: hsl(228, 45%, 44%);
+}
+#interface #infoInput h1 {
+  color: hsl(202, 55%, 16%);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#interface #infoInput form label {
+  color: hsl(200, 24%, 40%);
+}
+#interface #infoInput form p {
+  margin-bottom: 0.5rem;
 }
 #interface #infoInput form .displayGrid {
   display: grid;
@@ -39,19 +50,31 @@
   color: hsl(4, 69%, 50%);
   display: none;
 }
+#interface #infoInput form #btnClearAll {
+  border: none;
+  background: none;
+  color: hsl(200, 24%, 40%);
+  border-bottom: 1px solid hsl(200, 24%, 40%);
+  margin-bottom: 0.5rem;
+}
 #interface #infoInput form #amountGrid {
   display: grid;
   grid-template-columns: auto 1fr;
-  border: 1px solid hsl(202, 55%, 16%);
-  border-radius: 0;
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 0.2rem;
 }
 #interface #infoInput form #amountGrid input {
   border: none;
+  background: none;
+  padding: 0.5rem;
 }
 #interface #infoInput form #amountGrid #leftSymbol {
   grid-column: 1;
   grid-row: 1;
   background-color: hsl(202, 86%, 94%);
+  border-radius: 0.2rem 0 0 0.2rem;
+  padding: 0.5rem;
+  color: hsl(200, 24%, 40%);
 }
 #interface #resu {
   background-color: hsl(202, 55%, 16%);
@@ -61,7 +84,7 @@
   color: hsl(203, 41%, 72%);
 }
 #interface #resu #completedResu {
-  display: block;
+  display: none;
 }
 #interface #resu #completedResu #monthlyResu {
   color: hsl(61, 70%, 52%);
