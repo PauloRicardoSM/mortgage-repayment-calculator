@@ -27,6 +27,7 @@
             color: variables.$slate900;
             font-size: 1.5rem;
             margin-bottom: .5rem;
+            margin-top: .5rem;
         }
 
         form {
@@ -34,22 +35,24 @@
                 color: variables.$slate700;
             }
 
-            p {
-                margin-bottom: .5rem;
-            }
-
             .displayGrid {
                 display: grid;
                 grid-template-columns: 1fr auto;
                 grid-template-rows: auto;
-                border: 1px solid variables.$slate900;
+                border: 1px solid variables.$slate700;
+                border-radius: .2rem;
+                margin-top: .5rem;
                 
                 input {
                     border: none;
+                    padding: .5rem;
+                    border-radius: .2rem;
                 }
 
                 .rightSymbol {
                     background-color: variables.$slate100;
+                    border-radius: .2rem;
+                    padding: .5rem;
                 }
             }
 
@@ -71,7 +74,7 @@
                 background: none;
                 color: variables.$slate700;
                 border-bottom: 1px solid variables.$slate700;
-                margin-bottom: .5rem;
+                margin-bottom: 1.5rem;
             }
 
             #amountGrid {
@@ -79,6 +82,7 @@
                 grid-template-columns: auto 1fr;
                 border: 1px solid variables.$slate700;
                 border-radius: .2rem;
+                margin-top: .5rem;
 
                 input {
                     border: none;
@@ -93,6 +97,24 @@
                     border-radius: .2rem 0 0 .2rem;
                     padding: .5rem;
                     color: variables.$slate700;
+                }
+            }
+
+            #mortgageType {
+                legend {
+                    color: variables.$slate700;
+                    margin-bottom: .5rem;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .mortType {
+                    border: 1px solid variables.$slate700;
+                    border-radius: .2rem;
+                    padding: .5rem; 
                 }
             }
         }

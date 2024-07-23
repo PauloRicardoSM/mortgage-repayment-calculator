@@ -21,24 +21,28 @@
   color: hsl(202, 55%, 16%);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 #interface #infoInput form label {
   color: hsl(200, 24%, 40%);
-}
-#interface #infoInput form p {
-  margin-bottom: 0.5rem;
 }
 #interface #infoInput form .displayGrid {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto;
-  border: 1px solid hsl(202, 55%, 16%);
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 0.2rem;
+  margin-top: 0.5rem;
 }
 #interface #infoInput form .displayGrid input {
   border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
 }
 #interface #infoInput form .displayGrid .rightSymbol {
   background-color: hsl(202, 86%, 94%);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
 }
 #interface #infoInput form .borderHidden {
   border: none;
@@ -55,13 +59,14 @@
   background: none;
   color: hsl(200, 24%, 40%);
   border-bottom: 1px solid hsl(200, 24%, 40%);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 #interface #infoInput form #amountGrid {
   display: grid;
   grid-template-columns: auto 1fr;
   border: 1px solid hsl(200, 24%, 40%);
   border-radius: 0.2rem;
+  margin-top: 0.5rem;
 }
 #interface #infoInput form #amountGrid input {
   border: none;
@@ -75,6 +80,19 @@
   border-radius: 0.2rem 0 0 0.2rem;
   padding: 0.5rem;
   color: hsl(200, 24%, 40%);
+}
+#interface #infoInput form #mortgageType legend {
+  color: hsl(200, 24%, 40%);
+  margin-bottom: 0.5rem;
+}
+#interface #infoInput form #mortgageType p {
+  display: flex;
+  flex-direction: column;
+}
+#interface #infoInput form #mortgageType .mortType {
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
 }
 #interface #resu {
   background-color: hsl(202, 55%, 16%);
