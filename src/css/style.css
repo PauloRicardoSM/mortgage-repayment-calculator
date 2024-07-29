@@ -10,13 +10,6 @@
 #interface {
   padding: 1rem;
 }
-#interface .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-#interface .attribution a {
-  color: hsl(228, 45%, 44%);
-}
 #interface #infoInput h1 {
   color: hsl(202, 55%, 16%);
   font-size: 1.5rem;
@@ -124,16 +117,45 @@
 #interface #resu {
   background-color: hsl(202, 55%, 16%);
   color: hsl(0, 0%, 100%);
+  width: calc(100% + 2.5rem);
+  height: calc(100% + 2rem);
+  margin: 0 0 -1rem -1rem;
+  padding: 1rem;
 }
 #interface #resu p {
   color: hsl(203, 41%, 72%);
 }
-#interface #resu #completedResu {
-  display: none;
+#interface #resu h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
 }
-#interface #resu #completedResu #monthlyResu {
+#interface #resu .attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+#interface #resu .attribution a {
   color: hsl(61, 70%, 52%);
 }
-#interface #resu #completedResu #repayResu {
+#interface #resu #emptyResu {
+  text-align: center;
+  display: none;
+}
+#interface #resu #completedResu #results {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-top: 0.1rem solid hsl(61, 70%, 52%);
+  border-radius: 1rem;
+  background-color: hsl(201, 80%, 10%);
+}
+#interface #resu #completedResu #results #monthlyResu {
+  color: hsl(61, 70%, 52%);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid hsl(200, 24%, 40%);
+  padding-bottom: 0.8rem;
+}
+#interface #resu #completedResu #results #repayResu {
   color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
