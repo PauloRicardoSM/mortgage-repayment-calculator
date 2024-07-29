@@ -31,6 +31,9 @@
         }
 
         form {
+            display: flex;
+            flex-direction: column;
+
             label {
                 color: variables.$slate700;
             }
@@ -75,6 +78,7 @@
                 color: variables.$slate700;
                 border-bottom: 1px solid variables.$slate700;
                 margin-bottom: 1.5rem;
+                align-self: start;
             }
 
             #amountGrid {
@@ -110,11 +114,38 @@
                     display: flex;
                     flex-direction: column;
                 }
+                
+                label {
+                    color: variables.$slate900;
+                }
 
                 .mortType {
                     border: 1px solid variables.$slate700;
                     border-radius: .2rem;
-                    padding: .5rem; 
+                    padding: .5rem;
+                    font-weight: bold; 
+                }
+
+                #rapaymentType {
+                    margin-bottom: .5rem;
+                }
+
+                
+            }
+
+            #btnSubmit {
+                @include mixins.flex-center;
+
+                background-color: variables.$lime;
+                color: variables.$slate900;
+                padding: .8rem;
+                border-radius: 5rem;
+                border: none;
+                margin: 0rem 0 1.5rem 0;
+                font-weight: bold;
+
+                img {
+                    margin-right: .5rem;
                 }
             }
         }
@@ -126,6 +157,10 @@
         
         p {
             color: variables.$slate300;
+        }
+
+        #emptyResu {
+            @include mixins.flex-center;
         }
 
         #completedResu {

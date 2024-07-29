@@ -23,6 +23,10 @@
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
 }
+#interface #infoInput form {
+  display: flex;
+  flex-direction: column;
+}
 #interface #infoInput form label {
   color: hsl(200, 24%, 40%);
 }
@@ -60,6 +64,7 @@
   color: hsl(200, 24%, 40%);
   border-bottom: 1px solid hsl(200, 24%, 40%);
   margin-bottom: 1.5rem;
+  align-self: start;
 }
 #interface #infoInput form #amountGrid {
   display: grid;
@@ -89,10 +94,32 @@
   display: flex;
   flex-direction: column;
 }
+#interface #infoInput form #mortgageType label {
+  color: hsl(202, 55%, 16%);
+}
 #interface #infoInput form #mortgageType .mortType {
   border: 1px solid hsl(200, 24%, 40%);
   border-radius: 0.2rem;
   padding: 0.5rem;
+  font-weight: bold;
+}
+#interface #infoInput form #mortgageType #rapaymentType {
+  margin-bottom: 0.5rem;
+}
+#interface #infoInput form #btnSubmit {
+  background-color: hsl(61, 70%, 52%);
+  color: hsl(202, 55%, 16%);
+  padding: 0.8rem;
+  border-radius: 5rem;
+  border: none;
+  margin: 0rem 0 1.5rem 0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#interface #infoInput form #btnSubmit img {
+  margin-right: 0.5rem;
 }
 #interface #resu {
   background-color: hsl(202, 55%, 16%);
