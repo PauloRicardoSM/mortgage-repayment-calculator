@@ -9,6 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="src/css/style.css">
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 </head>
 
@@ -25,7 +27,7 @@
           <p>
             <label for="imortgageAmount">Mortgage Amount</label>
             <div id="amountGrid">
-              <input type="number" name="mortgageAmount" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" required>
+              <input type="number" name="mortgageAmount" class="input" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" required>
               <span id="leftSymbol">$</span>
             </div>
 
@@ -40,7 +42,7 @@
           <p>
             <label for="imortgageTerm">Mortgage Term</label>
             <div class="displayGrid">
-              <input type="number" name="mortgageTerm" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
+              <input type="number" name="mortgageTerm" class="input" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
               <span class="rightSymbol">Years</span>
             </div>
             
@@ -55,7 +57,7 @@
           <p class="inputSymbol">
             <label for="iinterestRate">Interest Rate</label>
             <div class="displayGrid">
-              <input type="number" name="interestRate" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
+              <input type="number" name="interestRate" class="input" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
               <span class="rightSymbol">%</span>
             </div>
 
@@ -69,7 +71,7 @@
           <legend id="mortgageTypeLabel">Mortgage Type</legend>
           <p>
             <div id="rapaymentType" class="mortType">
-              <input type="radio" name="MortgageType" id="irepayment" aria-labelledby="mortgageTypeLabel" aria-describedby="mortgageTypeError" required>
+              <input type="radio" name="MortgageType" class="input" id="irepayment" aria-labelledby="mortgageTypeLabel" aria-describedby="mortgageTypeError" >
               <label for="irepayment">Repayment</label>
             </div>  
 
@@ -120,5 +122,7 @@
       </div>
     </div>
   </div>
+
+  <script src="src/js/script.js" defer></script>
 </body>
 </html>

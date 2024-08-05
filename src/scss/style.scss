@@ -10,6 +10,10 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #interface {
     padding: 1rem;
 
@@ -60,7 +64,8 @@
     
             .error {
                 color: variables.$red;
-                display: none;
+                display: block;
+                margin: -1rem 0 1rem;
             }
 
             #btnClearAll {
@@ -172,10 +177,11 @@
 
         #emptyResu {
             text-align: center;
-            display: none;
         }
 
         #completedResu {
+            display: none;
+
             #results {
                 margin-top: 1.5rem;
                 padding: 1rem;

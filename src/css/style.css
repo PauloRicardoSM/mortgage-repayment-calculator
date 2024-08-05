@@ -7,6 +7,10 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #interface {
   padding: 1rem;
 }
@@ -49,7 +53,8 @@
 }
 #interface #infoInput form .error {
   color: hsl(4, 69%, 50%);
-  display: none;
+  display: block;
+  margin: -1rem 0 1rem;
 }
 #interface #infoInput form #btnClearAll {
   border: none;
@@ -139,6 +144,8 @@
 }
 #interface #resu #emptyResu {
   text-align: center;
+}
+#interface #resu #completedResu {
   display: none;
 }
 #interface #resu #completedResu #results {
