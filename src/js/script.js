@@ -4,32 +4,39 @@ $(document).ready(function() {
 
         let hasErros = false;
 
-        $('.input').each(function() {
-            if (!$(this).val()) {
-                $(this).nextAll('.error').css('display', 'block');
-                hasErros = true;
-            } else {
-                $(this).nextAll('.error').css('display', 'none');
-            }
-        });
+        const campos
+
+        // if($('input[name="mortgageAmount"]').val() === '') {
+        //     $('#mortgageAmountError').css('display', 'block');
+        //     hasErros = true;
+        // } else {
+        //     $('#mortgageAmountError').css('display', 'none');
+        //     hasErros = false;
+        // }
+
+        // if($('input[name="mortgageTerm"]').val() === '') {
+        //     $('#mortgageTermError').css('display', 'block');
+        //     hasErros = true;
+        // } else {
+        //     $('#mortgageTermError').css('display', 'none');
+        // hasErros = false;
+        // }
+
+        // if($('input[name="interestRate"]').val() === '') {
+        //     $('#interestRateError').css('display', 'block');
+        //     hasErros = true;
+        // } else {
+        //     $('#interestRateError').css('display', 'none');
+        // hasErros = false;
+        // }
+
+        // if(!$('input[name="mortgageType"]:checked').length) {
+        //     $('#mortgageTypeError').css('display', 'block');
+        //     hasErros = true;
+        // } else {
+        //     $('#mortgageTypeError').css('display', 'none');
+        //     hasErros = false;
+        // }
     });
 });
-
-// $(document).ready(function() {
-//     $("#btnSubmit").click(function(event) {
-//         event.preventDefault();
-
-//         let hasErros = false;
-
-//         $('.input').each(function() {
-//             let errorElement = $(this).closest('p').find('.error');
-//             if (!$(this).val()) {
-//                 errorElement.css('display', 'block');
-//                 hasErros = true;
-//             } else {
-//                 errorElement.css('display', 'none');
-//             }
-//         });
-//     });
-// });
 

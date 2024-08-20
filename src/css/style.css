@@ -53,7 +53,7 @@ body {
 }
 #interface #infoInput form .error {
   color: hsl(4, 69%, 50%);
-  display: block;
+  display: none;
   margin: -1rem 0 1rem;
 }
 #interface #infoInput form #btnClearAll {
