@@ -4,9 +4,49 @@ $(document).ready(function() {
 
         let hasErros = false;
 
-        const campos
+        const fields = [ 
+            {name: 'mortgageAmount', errorId: 'mortgageAmountError'},
+            {name: 'mortgageTerm', errorId: 'mortgageTermError'},
+            {name: 'interestRate', errorId: 'interestRateError'}
+        ];
 
-        // if($('input[name="mortgageAmount"]').val() === '') {
+        fields.forEach(campo => {
+            if($(`input[name="${campo.name}"]`).val().trim() === '') {
+                $(campo.errorId).css('display', 'block');
+                hasErros = true;
+            } else {
+                $(campo.errorId).css('display', 'none');
+            }
+        });
+
+
+        const fields = [ 
+            {name: 'mortgageAmount', errorId: '#mortgageAmountError'},
+            {name: 'mortgageTerm', errorId: '#mortgageTermError'},
+            {name: 'interestRate', errorId: '#interestRateError'}
+        ];
+
+        fields.forEach(campo => {
+            if ($(`input[name="${campo.name}"]`).val().trim() === '') {
+                $(campo.errorId).css('display', 'block');
+                hasErros = true;
+            } else {
+                $(campo.errorId).css('display', 'none');
+            }
+        });
+
+
+        if(!$('input[name="mortgageType"]:checked').length) {
+            $('#mortgageTypeError').css('display', 'block');
+            hasErros = true;
+        } else {
+            $('#mortgageTypeError').css('display', 'none');
+            hasErros = false;
+        }
+    });
+});
+
+// if($('input[name="mortgageAmount"]').val() === '') {
         //     $('#mortgageAmountError').css('display', 'block');
         //     hasErros = true;
         // } else {
@@ -29,14 +69,3 @@ $(document).ready(function() {
         //     $('#interestRateError').css('display', 'none');
         // hasErros = false;
         // }
-
-        // if(!$('input[name="mortgageType"]:checked').length) {
-        //     $('#mortgageTypeError').css('display', 'block');
-        //     hasErros = true;
-        // } else {
-        //     $('#mortgageTypeError').css('display', 'none');
-        //     hasErros = false;
-        // }
-    });
-});
-
