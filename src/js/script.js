@@ -27,8 +27,43 @@ $(document).ready(function() {
             hasErros = false;
         }
 
+        function repaymentType(mortgageAmount, mortgageTerm, interestRate) {
+            let monthlyInterestRate = interestRate / 12;
+            let numberPayments = mortgageTerm * 12;
+            let monthlyRepayment = mortgageAmount * ((monthlyInterestRate * Math.pow((1 + monthlyInterestRate), numberPayments))/((Math.pow((1 + monthlyInterestRate), numberPayments)) - 1))
+            let totalPayment = monthlyRepayment * numberPayments; 
+
+            return { monthlyRepayment, totalPayment };
+        }
+
+        function interestOnlyType(mortgageAmount, mortgageTerm, interestRate) {
+            let monthlyRepayment = mortgageAmount * (interestRate / 12);
+            let totalPayment = monthlyRepayment * mortgageTerm * 12;
+
+            return { monthlyRepayment, totalPayment };
+        }
+
         if(!hasErros) {
-                
+            let mortgageAmount = $('#imortgageAmount').val();
+            let mortgageTerm = $('#mortgageTerm').val();
+            let interestRate = $('#interestRate').val();
+            let mortgageType = $('input[name="mortgageType"]:checked').val();
+
+            if(mortgageType == "repayment") {
+                let resu = repaymentType(mortgageAmount, mortgageTerm, interestRate);
+                let completeMonthlyResu = resu.monthlyRepayment;
+                let completeTotalPayment = resu.totalPayment;
+
+                $('#monthlyResu').text(`${completeMonthlyResu.toFixed(2)}`);
+                $('#repayResu').text(`${completeTotalPayment.toFixed(2)}`);
+            } else {
+                let resu = interestOnlyType(mortgageAmount, mortgageTerm, interestRate);
+                let completeMonthlyResu = resu.monthlyRepayment;
+                let completeTotalPayment = resu.totalPayment;
+
+                $('#monthlyResu').text(`${completeMonthlyResu.toFixed(2)}`);
+                $('#repayResu').text(`${completeTotalPayment.toFixed(2)}`);
+            }
         }
     });
 });
