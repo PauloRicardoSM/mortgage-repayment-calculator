@@ -15,9 +15,9 @@ body {
 }
 
 #interface {
-    padding: 1rem;
-
     #infoInput {
+        padding: 0 1rem;
+
         h1 {
             color: variables.$slate900;
             font-size: 1.5rem;
@@ -151,9 +151,6 @@ body {
     #resu {
         background-color: variables.$slate900;
         color: variables.$white;
-        width: calc(100% + 2.5rem);
-        height: calc(100% + 2rem);
-        margin: 0 0 -1rem -1rem;
         padding: 1rem;
         
         p {
@@ -177,10 +174,12 @@ body {
 
         #emptyResu {
             text-align: center;
+            display: none;
         }
 
         #completedResu {
-            display: none;
+            display: block;
+            justify-content: center;
 
             #results {
                 margin-top: 1.5rem;

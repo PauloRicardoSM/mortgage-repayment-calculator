@@ -11,8 +11,8 @@ body {
   overflow-x: hidden;
 }
 
-#interface {
-  padding: 1rem;
+#interface #infoInput {
+  padding: 0 1rem;
 }
 #interface #infoInput h1 {
   color: hsl(202, 55%, 16%);
@@ -122,9 +122,6 @@ body {
 #interface #resu {
   background-color: hsl(202, 55%, 16%);
   color: hsl(0, 0%, 100%);
-  width: calc(100% + 2.5rem);
-  height: calc(100% + 2rem);
-  margin: 0 0 -1rem -1rem;
   padding: 1rem;
 }
 #interface #resu p {
@@ -144,9 +141,11 @@ body {
 }
 #interface #resu #emptyResu {
   text-align: center;
+  display: none;
 }
 #interface #resu #completedResu {
-  display: none;
+  display: block;
+  justify-content: center;
 }
 #interface #resu #completedResu #results {
   margin-top: 1.5rem;
