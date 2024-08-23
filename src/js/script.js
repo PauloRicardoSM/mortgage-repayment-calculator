@@ -28,7 +28,7 @@ $(document).ready(function() {
         }
 
         function repaymentType(mortgageAmount, mortgageTerm, interestRate) {
-            let monthlyInterestRate = interestRate / 12;
+            let monthlyInterestRate = (interestRate / 100) / 12;
             let numberPayments = mortgageTerm * 12;
             let monthlyRepayment = mortgageAmount * ((monthlyInterestRate * Math.pow((1 + monthlyInterestRate), numberPayments))/((Math.pow((1 + monthlyInterestRate), numberPayments)) - 1))
             let totalPayment = monthlyRepayment * numberPayments; 
@@ -37,17 +37,22 @@ $(document).ready(function() {
         }
 
         function interestOnlyType(mortgageAmount, mortgageTerm, interestRate) {
-            let monthlyRepayment = mortgageAmount * (interestRate / 12);
+            let monthlyRepayment = mortgageAmount * ((interestRate / 100) / 12);
             let totalPayment = monthlyRepayment * mortgageTerm * 12;
 
             return { monthlyRepayment, totalPayment };
         }
 
         if(!hasErros) {
-            let mortgageAmount = $('#imortgageAmount').val();
-            let mortgageTerm = $('#mortgageTerm').val();
-            let interestRate = $('#interestRate').val();
+            let mortgageAmount = parseFloat($('#imortgageAmount').val());
+            let mortgageTerm = parseInt($('#imortgageTerm').val());
+            let interestRate = parseFloat($('#iinterestRate').val());
             let mortgageType = $('input[name="mortgageType"]:checked').val();
+
+            if (isNaN(mortgageAmount) || isNaN(mortgageTerm) || isNaN(interestRate)) {
+                alert("Invalid values");
+                return;
+            }
 
             if(mortgageType == "repayment") {
                 let resu = repaymentType(mortgageAmount, mortgageTerm, interestRate);
@@ -64,6 +69,11 @@ $(document).ready(function() {
                 $('#monthlyResu').text(`${completeMonthlyResu.toFixed(2)}`);
                 $('#repayResu').text(`${completeTotalPayment.toFixed(2)}`);
             }
+
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+            });
         }
     });
 });

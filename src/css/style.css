@@ -141,10 +141,9 @@ body {
 }
 #interface #resu #emptyResu {
   text-align: center;
-  display: none;
 }
 #interface #resu #completedResu {
-  display: block;
+  display: none;
   justify-content: center;
 }
 #interface #resu #completedResu #results {
