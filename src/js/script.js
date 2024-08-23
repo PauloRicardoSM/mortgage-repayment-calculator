@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    $('#btnClearAll').click(function() {
+        $('#completedResu').css('display', 'none');
+        $('#emptyResu').css('display', 'block');
+    });
+
     $("#btnSubmit").click(function(event) {
         event.preventDefault();
 
@@ -69,6 +74,9 @@ $(document).ready(function() {
                 $('#monthlyResu').text(`${completeMonthlyResu.toFixed(2)}`);
                 $('#repayResu').text(`${completeTotalPayment.toFixed(2)}`);
             }
+
+            $('#emptyResu').css('display', 'none');
+            $('#completedResu').css('display', 'block');
 
             window.scrollTo({
                 top: document.body.scrollHeight,
