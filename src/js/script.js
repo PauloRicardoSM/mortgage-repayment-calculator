@@ -1,7 +1,20 @@
-$(document).ready(function() {
+ $(document).ready(function() {
+    $('input[type="radio"][name="mortgageType"]').change(function() {
+        $('input[type="radio"][name="mortgageType"]').each(function() {
+            if ($(this).is(':checked')) {
+                $(this).closest('.mortType').css('background-color', 'hsla(61, 70%, 52%, 0.2)');
+                $(this).closest('.mortType').css('border-color', 'hsl(61, 70%, 52%)')
+            } else {
+                $(this).closest('.mortType').css('background-color', '');
+            }
+        });
+    });  
+
     $('#btnClearAll').click(function() {
         $('#completedResu').css('display', 'none');
         $('#emptyResu').css('display', 'block');
+
+        $('.mortType').css('background-color', '');
     });
 
     $("#btnSubmit").click(function(event) {
@@ -64,15 +77,15 @@ $(document).ready(function() {
                 let completeMonthlyResu = resu.monthlyRepayment;
                 let completeTotalPayment = resu.totalPayment;
 
-                $('#monthlyResu').text(`${completeMonthlyResu.toFixed(2)}`);
-                $('#repayResu').text(`${completeTotalPayment.toFixed(2)}`);
+                $('#monthlyResu').text(`£${completeMonthlyResu.toLocaleString('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`);
+                $('#repayResu').text(`£${completeTotalPayment.toLocaleString('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`);
             } else {
                 let resu = interestOnlyType(mortgageAmount, mortgageTerm, interestRate);
                 let completeMonthlyResu = resu.monthlyRepayment;
                 let completeTotalPayment = resu.totalPayment;
 
-                $('#monthlyResu').text(`${completeMonthlyResu.toFixed(2)}`);
-                $('#repayResu').text(`${completeTotalPayment.toFixed(2)}`);
+                $('#monthlyResu').text(`£${completeMonthlyResu.toLocaleString('en-GB', {minimumFractiondigits: 2, maximumFractionDigits: 2})}`);
+                $('#repayResu').text(`£${completeTotalPayment.toLocaleString('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`);
             }
 
             $('#emptyResu').css('display', 'none');

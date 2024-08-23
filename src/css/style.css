@@ -84,6 +84,29 @@ body {
   padding: 0.5rem;
   color: hsl(200, 24%, 40%);
 }
+#interface #infoInput form #mortgageType input[type=radio]:checked {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid hsl(61, 70%, 52%); /* Amarelo queimado */
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+}
+#interface #infoInput form #mortgageType input[type=radio]:checked::before {
+  content: "";
+  display: block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: hsl(61, 70%, 52%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #interface #infoInput form #mortgageType legend {
   color: hsl(200, 24%, 40%);
   margin-bottom: 0.5rem;
@@ -94,6 +117,7 @@ body {
 }
 #interface #infoInput form #mortgageType label {
   color: hsl(202, 55%, 16%);
+  margin-left: 0.5rem;
 }
 #interface #infoInput form #mortgageType .mortType {
   border: 1px solid hsl(200, 24%, 40%);
@@ -159,8 +183,10 @@ body {
   margin-bottom: 1rem;
   border-bottom: 0.1rem solid hsl(200, 24%, 40%);
   padding-bottom: 0.8rem;
+  font-weight: bold;
 }
 #interface #resu #completedResu #results #repayResu {
   color: hsl(0, 0%, 100%);
+  font-weight: bold;
   font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
