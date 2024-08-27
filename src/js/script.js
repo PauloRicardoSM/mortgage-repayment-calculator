@@ -15,6 +15,7 @@
         $('#emptyResu').css('display', 'block');
 
         $('.mortType').css('background-color', '');
+        $('.mortType').css('border-color', '');
     });
 
     $("#btnSubmit").click(function(event) {
