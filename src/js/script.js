@@ -6,6 +6,7 @@
                 $(this).closest('.mortType').css('border-color', 'hsl(61, 70%, 52%)')
             } else {
                 $(this).closest('.mortType').css('background-color', '');
+                $('.mortType').css('border-color', '');
             }
         });
     });  
