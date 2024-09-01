@@ -18,16 +18,16 @@ body {
     #infoInput {
         padding: 0 1rem;
 
-        h1 {
-            color: variables.$slate900;
-            font-size: 1.5rem;
-            margin-bottom: .5rem;
-            margin-top: 1.5rem;
-        }
-
         form {
             display: flex;
             flex-direction: column;
+
+            h1 {
+                color: variables.$slate900;
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
+                margin-top: 1.5rem;
+            }
 
             label {
                 color: variables.$slate700;
@@ -229,5 +229,40 @@ body {
                 }
             }
         } 
+    }
+
+    @include mixins.tabletView {
+        #infoInput {
+            form {
+                #flexTittleBtnClear {
+                    @include mixins.flexCenter;
+                    margin: 1rem 0 1rem;
+
+                    h1 {
+                        margin: 0;
+                        flex: 1;
+                    }
+
+                    #btnClearAll {
+                        margin: 0;
+                    }
+                }
+
+                #flexFieldset {
+                    display: flex;
+                    gap: 1rem;
+
+                    .flexFieldsetItem {
+                        flex: 1;
+                    }
+                }
+
+                #btnSubmit {
+                    justify-content: left;
+                    width: fit-content;
+                    padding: .8rem 1.5rem;
+                }
+            }
+        }
     }
 }

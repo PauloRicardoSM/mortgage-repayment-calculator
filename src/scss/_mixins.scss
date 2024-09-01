@@ -1,0 +1,11 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin tabletView {
+    @media(min-width: 540px) {
+        @content;
+    }
+}

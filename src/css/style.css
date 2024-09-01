@@ -14,15 +14,15 @@ body {
 #interface #infoInput {
   padding: 0 1rem;
 }
-#interface #infoInput h1 {
+#interface #infoInput form {
+  display: flex;
+  flex-direction: column;
+}
+#interface #infoInput form h1 {
   color: hsl(202, 55%, 16%);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
-}
-#interface #infoInput form {
-  display: flex;
-  flex-direction: column;
 }
 #interface #infoInput form label {
   color: hsl(200, 24%, 40%);
@@ -189,4 +189,31 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: bold;
   font-size: 1.5rem;
+}
+@media (min-width: 540px) {
+  #interface #infoInput form #flexTittleBtnClear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 1rem;
+  }
+  #interface #infoInput form #flexTittleBtnClear h1 {
+    margin: 0;
+    flex: 1;
+  }
+  #interface #infoInput form #flexTittleBtnClear #btnClearAll {
+    margin: 0;
+  }
+  #interface #infoInput form #flexFieldset {
+    display: flex;
+    gap: 1rem;
+  }
+  #interface #infoInput form #flexFieldset .flexFieldsetItem {
+    flex: 1;
+  }
+  #interface #infoInput form #btnSubmit {
+    justify-content: left;
+    width: fit-content;
+    padding: 0.8rem 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

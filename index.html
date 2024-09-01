@@ -17,12 +17,13 @@
 <body>
   <div id="interface">
     <div id="infoInput">
-      <h1>Mortgage Calculator</h1>
-
       <form action="" id="myForm" method="post">
-        <button type="reset" id="btnClearAll">Clear All</button>
+        <div id="flexTittleBtnClear">
+          <h1>Mortgage Calculator</h1>
+          <button type="reset" id="btnClearAll">Clear All</button>
+        </div>
 
-        <fieldset class="borderHidden">
+        <fieldset id="fmortgageAmount" class="borderHidden">
           <legend class="visually-hidden" id="mortgageAmountLabel">Mortgage Amount</legend>
           <p class="pForm">
             <label for="imortgageAmount">Mortgage Amount</label>
@@ -37,35 +38,37 @@
           </p>
         </fieldset>
 
-        <fieldset class="borderHidden">
-          <legend class="visually-hidden" id="mortgageTermLabel">Mortgage Term</legend>
-          <p>
-            <label for="imortgageTerm">Mortgage Term</label>
-            <div class="displayGrid">
-              <input type="number" name="mortgageTerm" class="input" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
-              <span class="rightSymbol">Years</span>
-            </div>
-            
-            <br>
+        <div id="flexFieldset">
+          <fieldset id="fmortgageTerm" class="borderHidden flexFieldsetItem">
+            <legend class="visually-hidden" id="mortgageTermLabel">Mortgage Term</legend>
+            <p>
+              <label for="imortgageTerm">Mortgage Term</label>
+              <div class="displayGrid">
+                <input type="number" name="mortgageTerm" class="input" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
+                <span class="rightSymbol">Years</span>
+              </div>
+              
+              <br>
 
-            <span class="error" id="mortgageTermError" aria-live="polite">This fiels is required</span>
-          </p>
-        </fieldset>
+              <span class="error" id="mortgageTermError" aria-live="polite">This fiels is required</span>
+            </p>
+          </fieldset>
 
-        <fieldset class="borderHidden">
-          <legend class="visually-hidden" id="interestRateLabel">Interest Rate</legend>
-          <p class="inputSymbol">
-            <label for="iinterestRate">Interest Rate</label>
-            <div class="displayGrid">
-              <input type="number" name="interestRate" class="input" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
-              <span class="rightSymbol">%</span>
-            </div>
+          <fieldset id="fmortgageRate" class="borderHidden flexFieldsetItem">
+            <legend class="visually-hidden" id="interestRateLabel">Interest Rate</legend>
+            <p class="inputSymbol">
+              <label for="iinterestRate">Interest Rate</label>
+              <div class="displayGrid">
+                <input type="number" name="interestRate" class="input" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
+                <span class="rightSymbol">%</span>
+              </div>
 
-            <br>
+              <br>
 
-            <span class="error" id="interestRateError" aria-live="polite">This field is required</span>
-          </p>
-        </fieldset>
+              <span class="error" id="interestRateError" aria-live="polite">This field is required</span>
+            </p>
+          </fieldset>
+        </div>
 
         <fieldset id="mortgageType" class="borderHidden">
           <legend id="mortgageTypeLabel">Mortgage Type</legend>
@@ -84,7 +87,7 @@
 
             <span class="error" id="mortgageTypeError">This field is required</span>
           </p>
-          </fieldset>
+        </fieldset>
 
         <button type="submit" id="btnSubmit"> <img src="src/assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
       </form>
