@@ -12,226 +12,235 @@
 
 body {
     overflow-x: hidden;
-}
 
-#interface {
-    #infoInput {
-        padding: 0 1rem;
+    #interface {
+        background-color: variables.$white;
+        border-radius: 1rem;
 
-        form {
-            display: flex;
-            flex-direction: column;
+        #infoInput {
+            padding: 0 1rem;
 
-            h1 {
-                color: variables.$slate900;
-                font-size: 1.5rem;
-                margin-bottom: .5rem;
-                margin-top: 1.5rem;
-            }
+            form {
+                display: flex;
+                flex-direction: column;
 
-            label {
-                color: variables.$slate700;
-            }
-
-            .displayGrid {
-                display: grid;
-                grid-template-columns: 1fr auto;
-                grid-template-rows: auto;
-                border: 1px solid variables.$slate700;
-                border-radius: .2rem;
-                margin-top: .5rem;
-                
-                input {
-                    border: none;
-                    padding: .5rem;
-                    border-radius: .2rem;
-                }
-
-                .rightSymbol {
-                    background-color: variables.$slate100;
-                    border-radius: .2rem;
-                    padding: .5rem;
-                }
-            }
-
-            .borderHidden {
-                border: none;
-            }
-            
-            .visually-hidden {
-                display: none;
-            }
-    
-            .error {
-                color: variables.$red;
-                display: none;
-                margin: -1rem 0 1rem;
-            }
-
-            #btnClearAll {
-                border: none;
-                background: none;
-                color: variables.$slate700;
-                border-bottom: 1px solid variables.$slate700;
-                margin-bottom: 1.5rem;
-                align-self: start;
-            }
-
-            #amountGrid {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                border: 1px solid variables.$slate700;
-                border-radius: .2rem;
-                margin-top: .5rem;
-
-                input {
-                    border: none;
-                    background: none;
-                    padding: .5rem;
-                }
-
-                #leftSymbol {
-                    grid-column: 1;
-                    grid-row: 1;
-                    background-color: variables.$slate100;
-                    border-radius: .2rem 0 0 .2rem;
-                    padding: .5rem;
-                    color: variables.$slate700;
-                }
-            }
-
-            #mortgageType {
-                input[type="radio"]:checked {
-                    appearance: none;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    width: .8rem;
-                    height: .8rem;
-                    border: 2px solid variables.$lime; /* Amarelo queimado */
-                    border-radius: 50%;
-                    outline: none;
-                    position: relative;
-                  }
-                  
-                  input[type="radio"]:checked::before {
-                    content: "";
-                    display: block;
-                    width: .3rem;
-                    height: .3rem;
-                    border-radius: 50%;
-                    background-color: variables.$lime;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                  }
-                  
-                legend {
-                    color: variables.$slate700;
-                    margin-bottom: .5rem;
-                }
-
-                p {
-                    display: flex;
-                    flex-direction: column;
-                }
-                
-                label {
+                h1 {
                     color: variables.$slate900;
-                    margin-left: .5rem;
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;
+                    margin-top: 1.5rem;
                 }
 
-                .mortType {
+                label {
+                    color: variables.$slate700;
+                }
+
+                .displayGrid {
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    grid-template-rows: auto;
                     border: 1px solid variables.$slate700;
                     border-radius: .2rem;
-                    padding: .5rem;
-                    font-weight: bold; 
+                    margin-top: .5rem;
+
+                    input {
+                        border: none;
+                        padding: .5rem;
+                        border-radius: .2rem;
+                    }
+
+                    .rightSymbol {
+                        background-color: variables.$slate100;
+                        border-radius: .2rem;
+                        padding: .5rem;
+                    }
                 }
 
-                #rapaymentType {
-                    margin-bottom: .5rem;
+                .borderHidden {
+                    border: none;
                 }
 
-                
+                .visually-hidden {
+                    display: none;
+                }
+
+                .error {
+                    color: variables.$red;
+                    display: none;
+                    margin: -1rem 0 1rem;
+                }
+
+                #btnClearAll {
+                    border: none;
+                    background: none;
+                    color: variables.$slate700;
+                    border-bottom: 1px solid variables.$slate700;
+                    margin-bottom: 1.5rem;
+                    align-self: start;
+                }
+
+                #amountGrid {
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    border: 1px solid variables.$slate700;
+                    border-radius: .2rem;
+                    margin-top: .5rem;
+
+                    input {
+                        border: none;
+                        background: none;
+                        padding: .5rem;
+                    }
+
+                    #leftSymbol {
+                        grid-column: 1;
+                        grid-row: 1;
+                        background-color: variables.$slate100;
+                        border-radius: .2rem 0 0 .2rem;
+                        padding: .5rem;
+                        color: variables.$slate700;
+                    }
+                }
+
+                #mortgageType {
+                    input[type="radio"]:checked {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        width: .8rem;
+                        height: .8rem;
+                        border: 2px solid variables.$lime;
+                        /* Amarelo queimado */
+                        border-radius: 50%;
+                        outline: none;
+                        position: relative;
+                    }
+
+                    input[type="radio"]:checked::before {
+                        content: "";
+                        display: block;
+                        width: .3rem;
+                        height: .3rem;
+                        border-radius: 50%;
+                        background-color: variables.$lime;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    legend {
+                        color: variables.$slate700;
+                        margin-bottom: .5rem;
+                    }
+
+                    p {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    label {
+                        color: variables.$slate900;
+                        margin-left: .5rem;
+                    }
+
+                    .mortType {
+                        border: 1px solid variables.$slate700;
+                        border-radius: .2rem;
+                        padding: .5rem;
+                        font-weight: bold;
+                    }
+
+                    #rapaymentType {
+                        margin-bottom: .5rem;
+                    }
+
+
+                }
+
+                #btnSubmit {
+                    background-color: variables.$lime;
+                    color: variables.$slate900;
+                    padding: .8rem;
+                    border-radius: 5rem;
+                    border: none;
+                    margin: 1rem 0 2.5rem 0;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+
+        #resu {
+            background-color: variables.$slate900;
+            color: variables.$white;
+            padding: 1rem;
+
+            p {
+                color: variables.$slate300;
             }
 
-            #btnSubmit { 
-                background-color: variables.$lime;
-                color: variables.$slate900;
-                padding: .8rem;
-                border-radius: 5rem;
-                border: none;
-                margin: 1rem 0 2.5rem 0;
-                font-weight: bold;
-                display: flex;
-                align-items: center;
+            h2 {
+                margin: .5rem 0 1rem;
+                font-size: 1.2rem;
+            }
+
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+                margin-top: 2rem;
+
+                a {
+                    color: variables.$lime;
+                }
+            }
+
+            #emptyResu {
+                text-align: center;
+            }
+
+            #completedResu {
+                display: none;
                 justify-content: center;
 
-                img {
-                    margin-right: .5rem;
+                #results {
+                    margin-top: 1.5rem;
+                    padding: 1rem;
+                    border-top: .1rem solid variables.$lime;
+                    border-radius: 1rem;
+                    background-color: hsl(201, 80%, 10%);
+
+                    #monthlyResu {
+                        color: variables.$lime;
+                        font-size: 2rem;
+                        margin-bottom: 1rem;
+                        border-bottom: .1rem solid variables.$slate700;
+                        padding-bottom: .8rem;
+                        font-weight: bold;
+                    }
+
+                    #repayResu {
+                        color: variables.$white;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
-    }
-    
-    #resu {
-        background-color: variables.$slate900;
-        color: variables.$white;
-        padding: 1rem;
-        
-        p {
-            color: variables.$slate300;
-        }
-
-        h2 {
-            margin: .5rem 0 1rem;
-            font-size: 1.2rem;
-        }
-
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-            margin-top: 2rem;
-        
-            a {
-                color: variables.$lime;
-            }
-        } 
-
-        #emptyResu {
-            text-align: center;
-        }
-
-        #completedResu {
-            display: none;
-            justify-content: center;
-
-            #results {
-                margin-top: 1.5rem;
-                padding: 1rem;
-                border-top: .1rem solid variables.$lime;
-                border-radius: 1rem;
-                background-color: hsl(201, 80%, 10%);
-
-                #monthlyResu {
-                    color: variables.$lime;
-                    font-size: 2rem;
-                    margin-bottom: 1rem;
-                    border-bottom: .1rem solid variables.$slate700;
-                    padding-bottom: .8rem;
-                    font-weight: bold;
-                }
-    
-                #repayResu {
-                    color: variables.$white;
-                    font-weight: bold;
-                    font-size: 1.5rem;
-                }
-            }
-        } 
     }
 
     @include mixins.tabletView {
+        @include mixins.flexCenter;
+
+        padding: 1rem;
+        background-color: variables.$slate100;
+
         #infoInput {
             form {
                 #flexTittleBtnClear {
@@ -263,6 +272,10 @@ body {
                     padding: .8rem 1.5rem;
                 }
             }
+        }
+
+        #resu {
+            border-radius: 0 0 1rem 1rem;
         }
     }
 }

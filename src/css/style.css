@@ -10,24 +10,27 @@
 body {
   overflow-x: hidden;
 }
-
-#interface #infoInput {
+body #interface {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+}
+body #interface #infoInput {
   padding: 0 1rem;
 }
-#interface #infoInput form {
+body #interface #infoInput form {
   display: flex;
   flex-direction: column;
 }
-#interface #infoInput form h1 {
+body #interface #infoInput form h1 {
   color: hsl(202, 55%, 16%);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
 }
-#interface #infoInput form label {
+body #interface #infoInput form label {
   color: hsl(200, 24%, 40%);
 }
-#interface #infoInput form .displayGrid {
+body #interface #infoInput form .displayGrid {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto;
@@ -35,28 +38,28 @@ body {
   border-radius: 0.2rem;
   margin-top: 0.5rem;
 }
-#interface #infoInput form .displayGrid input {
+body #interface #infoInput form .displayGrid input {
   border: none;
   padding: 0.5rem;
   border-radius: 0.2rem;
 }
-#interface #infoInput form .displayGrid .rightSymbol {
+body #interface #infoInput form .displayGrid .rightSymbol {
   background-color: hsl(202, 86%, 94%);
   border-radius: 0.2rem;
   padding: 0.5rem;
 }
-#interface #infoInput form .borderHidden {
+body #interface #infoInput form .borderHidden {
   border: none;
 }
-#interface #infoInput form .visually-hidden {
+body #interface #infoInput form .visually-hidden {
   display: none;
 }
-#interface #infoInput form .error {
+body #interface #infoInput form .error {
   color: hsl(4, 69%, 50%);
   display: none;
   margin: -1rem 0 1rem;
 }
-#interface #infoInput form #btnClearAll {
+body #interface #infoInput form #btnClearAll {
   border: none;
   background: none;
   color: hsl(200, 24%, 40%);
@@ -64,19 +67,19 @@ body {
   margin-bottom: 1.5rem;
   align-self: start;
 }
-#interface #infoInput form #amountGrid {
+body #interface #infoInput form #amountGrid {
   display: grid;
   grid-template-columns: auto 1fr;
   border: 1px solid hsl(200, 24%, 40%);
   border-radius: 0.2rem;
   margin-top: 0.5rem;
 }
-#interface #infoInput form #amountGrid input {
+body #interface #infoInput form #amountGrid input {
   border: none;
   background: none;
   padding: 0.5rem;
 }
-#interface #infoInput form #amountGrid #leftSymbol {
+body #interface #infoInput form #amountGrid #leftSymbol {
   grid-column: 1;
   grid-row: 1;
   background-color: hsl(202, 86%, 94%);
@@ -84,18 +87,19 @@ body {
   padding: 0.5rem;
   color: hsl(200, 24%, 40%);
 }
-#interface #infoInput form #mortgageType input[type=radio]:checked {
+body #interface #infoInput form #mortgageType input[type=radio]:checked {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 0.8rem;
   height: 0.8rem;
-  border: 2px solid hsl(61, 70%, 52%); /* Amarelo queimado */
+  border: 2px solid hsl(61, 70%, 52%);
+  /* Amarelo queimado */
   border-radius: 50%;
   outline: none;
   position: relative;
 }
-#interface #infoInput form #mortgageType input[type=radio]:checked::before {
+body #interface #infoInput form #mortgageType input[type=radio]:checked::before {
   content: "";
   display: block;
   width: 0.3rem;
@@ -107,28 +111,28 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#interface #infoInput form #mortgageType legend {
+body #interface #infoInput form #mortgageType legend {
   color: hsl(200, 24%, 40%);
   margin-bottom: 0.5rem;
 }
-#interface #infoInput form #mortgageType p {
+body #interface #infoInput form #mortgageType p {
   display: flex;
   flex-direction: column;
 }
-#interface #infoInput form #mortgageType label {
+body #interface #infoInput form #mortgageType label {
   color: hsl(202, 55%, 16%);
   margin-left: 0.5rem;
 }
-#interface #infoInput form #mortgageType .mortType {
+body #interface #infoInput form #mortgageType .mortType {
   border: 1px solid hsl(200, 24%, 40%);
   border-radius: 0.2rem;
   padding: 0.5rem;
   font-weight: bold;
 }
-#interface #infoInput form #mortgageType #rapaymentType {
+body #interface #infoInput form #mortgageType #rapaymentType {
   margin-bottom: 0.5rem;
 }
-#interface #infoInput form #btnSubmit {
+body #interface #infoInput form #btnSubmit {
   background-color: hsl(61, 70%, 52%);
   color: hsl(202, 55%, 16%);
   padding: 0.8rem;
@@ -140,44 +144,44 @@ body {
   align-items: center;
   justify-content: center;
 }
-#interface #infoInput form #btnSubmit img {
+body #interface #infoInput form #btnSubmit img {
   margin-right: 0.5rem;
 }
-#interface #resu {
+body #interface #resu {
   background-color: hsl(202, 55%, 16%);
   color: hsl(0, 0%, 100%);
   padding: 1rem;
 }
-#interface #resu p {
+body #interface #resu p {
   color: hsl(203, 41%, 72%);
 }
-#interface #resu h2 {
+body #interface #resu h2 {
   margin: 0.5rem 0 1rem;
   font-size: 1.2rem;
 }
-#interface #resu .attribution {
+body #interface #resu .attribution {
   font-size: 11px;
   text-align: center;
   margin-top: 2rem;
 }
-#interface #resu .attribution a {
+body #interface #resu .attribution a {
   color: hsl(61, 70%, 52%);
 }
-#interface #resu #emptyResu {
+body #interface #resu #emptyResu {
   text-align: center;
 }
-#interface #resu #completedResu {
+body #interface #resu #completedResu {
   display: none;
   justify-content: center;
 }
-#interface #resu #completedResu #results {
+body #interface #resu #completedResu #results {
   margin-top: 1.5rem;
   padding: 1rem;
   border-top: 0.1rem solid hsl(61, 70%, 52%);
   border-radius: 1rem;
   background-color: hsl(201, 80%, 10%);
 }
-#interface #resu #completedResu #results #monthlyResu {
+body #interface #resu #completedResu #results #monthlyResu {
   color: hsl(61, 70%, 52%);
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -185,35 +189,45 @@ body {
   padding-bottom: 0.8rem;
   font-weight: bold;
 }
-#interface #resu #completedResu #results #repayResu {
+body #interface #resu #completedResu #results #repayResu {
   color: hsl(0, 0%, 100%);
   font-weight: bold;
   font-size: 1.5rem;
 }
 @media (min-width: 540px) {
-  #interface #infoInput form #flexTittleBtnClear {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsl(202, 86%, 94%);
+  }
+  body #infoInput form #flexTittleBtnClear {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1rem 0 1rem;
   }
-  #interface #infoInput form #flexTittleBtnClear h1 {
+  body #infoInput form #flexTittleBtnClear h1 {
     margin: 0;
     flex: 1;
   }
-  #interface #infoInput form #flexTittleBtnClear #btnClearAll {
+  body #infoInput form #flexTittleBtnClear #btnClearAll {
     margin: 0;
   }
-  #interface #infoInput form #flexFieldset {
+  body #infoInput form #flexFieldset {
     display: flex;
     gap: 1rem;
   }
-  #interface #infoInput form #flexFieldset .flexFieldsetItem {
+  body #infoInput form #flexFieldset .flexFieldsetItem {
     flex: 1;
   }
-  #interface #infoInput form #btnSubmit {
+  body #infoInput form #btnSubmit {
     justify-content: left;
     width: fit-content;
     padding: 0.8rem 1.5rem;
+  }
+  body #resu {
+    border-radius: 0 0 1rem 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
