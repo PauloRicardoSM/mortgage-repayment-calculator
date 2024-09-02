@@ -238,44 +238,88 @@ body {
     @include mixins.tabletView {
         @include mixins.flexCenter;
 
+        min-height: 100vh;
         padding: 1rem;
         background-color: variables.$slate100;
 
-        #infoInput {
-            form {
-                #flexTittleBtnClear {
-                    @include mixins.flexCenter;
-                    margin: 1rem 0 1rem;
-
-                    h1 {
-                        margin: 0;
-                        flex: 1;
+        #interface {
+            width: 50rem;
+            #infoInput {
+                form {
+                    #flexTittleBtnClear {
+                        @include mixins.flexCenter;
+                        margin: 1rem 0 1rem;
+    
+                        h1 {
+                            margin: 0;
+                            flex: 1;
+                        }
+    
+                        #btnClearAll {
+                            margin: 0;
+                        }
                     }
-
-                    #btnClearAll {
-                        margin: 0;
+    
+                    #flexFieldset {
+                        display: flex;
+                        gap: 1rem;
+    
+                        .flexFieldsetItem {
+                            flex: 1;
+                        }
                     }
-                }
-
-                #flexFieldset {
-                    display: flex;
-                    gap: 1rem;
-
-                    .flexFieldsetItem {
-                        flex: 1;
+    
+                    #btnSubmit {
+                        justify-content: left;
+                        width: fit-content;
+                        padding: .8rem 1.5rem;
                     }
-                }
-
-                #btnSubmit {
-                    justify-content: left;
-                    width: fit-content;
-                    padding: .8rem 1.5rem;
                 }
             }
+    
+            #resu {
+                border-radius: 0 0 1rem 1rem;
+            }
         }
+    }
 
-        #resu {
-            border-radius: 0 0 1rem 1rem;
+    @include mixins.desktopView {
+        #interface {
+            display: flex;
+
+            #infoInput {
+                .displayGrid {
+                    cursor: pointer;
+                }
+
+                form {
+                    input {
+                        cursor: pointer;
+                    }
+
+                    input:hover {
+                        border: 2px solid variables.$slate900;
+                    }
+
+                    #mortgageType {
+                        .mortType {
+                            cursor: pointer;
+                            
+                            label {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .mortType:hover {
+                            border: 1px solid variables.$lime;
+                        }
+                    }
+                }
+            }
+
+            #resu {
+                border-radius: 0 1rem 1rem 4rem;
+            }
         }
     }
 }

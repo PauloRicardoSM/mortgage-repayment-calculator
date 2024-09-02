@@ -199,35 +199,65 @@ body #interface #resu #completedResu #results #repayResu {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     padding: 1rem;
     background-color: hsl(202, 86%, 94%);
   }
-  body #infoInput form #flexTittleBtnClear {
+  body #interface {
+    width: 50rem;
+  }
+  body #interface #infoInput form #flexTittleBtnClear {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1rem 0 1rem;
   }
-  body #infoInput form #flexTittleBtnClear h1 {
+  body #interface #infoInput form #flexTittleBtnClear h1 {
     margin: 0;
     flex: 1;
   }
-  body #infoInput form #flexTittleBtnClear #btnClearAll {
+  body #interface #infoInput form #flexTittleBtnClear #btnClearAll {
     margin: 0;
   }
-  body #infoInput form #flexFieldset {
+  body #interface #infoInput form #flexFieldset {
     display: flex;
     gap: 1rem;
   }
-  body #infoInput form #flexFieldset .flexFieldsetItem {
+  body #interface #infoInput form #flexFieldset .flexFieldsetItem {
     flex: 1;
   }
-  body #infoInput form #btnSubmit {
+  body #interface #infoInput form #btnSubmit {
     justify-content: left;
     width: fit-content;
     padding: 0.8rem 1.5rem;
   }
-  body #resu {
+  body #interface #resu {
     border-radius: 0 0 1rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  body #interface {
+    display: flex;
+  }
+  body #interface #infoInput .displayGrid {
+    cursor: pointer;
+  }
+  body #interface #infoInput form input {
+    cursor: pointer;
+  }
+  body #interface #infoInput form input:hover {
+    border: 2px solid hsl(202, 55%, 16%);
+  }
+  body #interface #infoInput form #mortgageType .mortType {
+    cursor: pointer;
+  }
+  body #interface #infoInput form #mortgageType .mortType label {
+    cursor: pointer;
+  }
+  body #interface #infoInput form #mortgageType .mortType:hover {
+    border: 1px solid hsl(61, 70%, 52%);
+  }
+  body #interface #resu {
+    border-radius: 0 1rem 1rem 4rem;
   }
 }/*# sourceMappingURL=style.css.map */
