@@ -237,16 +237,21 @@ body #interface #resu #completedResu #results #repayResu {
 }
 @media (min-width: 1024px) {
   body #interface {
-    display: flex;
-  }
-  body #interface #infoInput .displayGrid {
-    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   body #interface #infoInput form input {
     cursor: pointer;
   }
   body #interface #infoInput form input:hover {
-    border: 2px solid hsl(202, 55%, 16%);
+    border: 1px solid black;
+  }
+  body #interface #infoInput form #btnClearAll {
+    cursor: pointer;
+  }
+  body #interface #infoInput form #btnClearAll:hover {
+    color: hsl(202, 55%, 16%);
+    font-weight: bold;
   }
   body #interface #infoInput form #mortgageType .mortType {
     cursor: pointer;
@@ -256,6 +261,12 @@ body #interface #resu #completedResu #results #repayResu {
   }
   body #interface #infoInput form #mortgageType .mortType:hover {
     border: 1px solid hsl(61, 70%, 52%);
+  }
+  body #interface #infoInput form #btnSubmit {
+    cursor: pointer;
+  }
+  body #interface #infoInput form #btnSubmit:hover {
+    background-color: hsla(61, 70%, 52%, 0.533);
   }
   body #interface #resu {
     border-radius: 0 1rem 1rem 4rem;

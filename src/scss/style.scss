@@ -285,20 +285,26 @@ body {
 
     @include mixins.desktopView {
         #interface {
-            display: flex;
-
-            #infoInput {
-                .displayGrid {
-                    cursor: pointer;
-                }
-
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+            #infoInput {    
                 form {
                     input {
                         cursor: pointer;
                     }
 
                     input:hover {
-                        border: 2px solid variables.$slate900;
+                        border: 1px solid black;
+                    }
+
+                    #btnClearAll {
+                        cursor: pointer;
+                    }
+
+                    #btnClearAll:hover {
+                        color: variables.$slate900;
+                        font-weight: bold;
                     }
 
                     #mortgageType {
@@ -313,6 +319,14 @@ body {
                         .mortType:hover {
                             border: 1px solid variables.$lime;
                         }
+                    }
+
+                    #btnSubmit {
+                        cursor: pointer;
+                    }
+
+                    #btnSubmit:hover {
+                        background-color: hsla(61, 70%, 52%, 0.533);;
                     }
                 }
             }
