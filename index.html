@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="src/css/style.css">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 </head>
@@ -43,7 +44,7 @@
             <legend class="visually-hidden" id="mortgageTermLabel">Mortgage Term</legend>
             <p>
               <label for="imortgageTerm">Mortgage Term</label>
-              <div class="displayGrid">
+              <div id="divMortgageTerm" class="displayGrid">
                 <input type="number" name="mortgageTerm" class="input inputNumber" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" min="0" required>
                 <span id="sYears" class="rightSymbol">Years</span>
               </div>
@@ -58,7 +59,7 @@
             <legend class="visually-hidden" id="interestRateLabel">Interest Rate</legend>
             <p class="inputSymbol">
               <label for="iinterestRate">Interest Rate</label>
-              <div class="displayGrid">
+              <div id="divInterestRate" class="displayGrid">
                 <input type="number" name="interestRate" class="input inputNumber" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" min="0" required>
                 <span id="sPercentage" class="rightSymbol">%</span>
               </div>

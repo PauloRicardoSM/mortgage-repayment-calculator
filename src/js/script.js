@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  // const activateHover = ['#amountgrid', '#divMortgageTerm', '#divInterestRate'];
+  // const inputNumber = ['#imortgageAmount', '#imortgageTerm', '#iinterestRate'];
+
+  // activateHover.forEach((selector) => {
+  //     $(selector).on('mouseenter', function() {
+  //         let allFilled = inputNumber.every((input) => $(input).val() !== '');
+  //         if (allFilled) {
+  //             gsap.to(selector, { backgroundColor: 'yellow', duration: 0.5 });
+  //         }
+  //     }).on('mouseleave', function() {
+  //         gsap.to(selector, { backgroundColor: 'blue', duration: 0.5 });
+  //     });
+  // });
+
   $('input[type="radio"][name="mortgageType"]').change(function () {
     $('input[type="radio"][name="mortgageType"]').each(function () {
       if ($(this).is(":checked")) {
