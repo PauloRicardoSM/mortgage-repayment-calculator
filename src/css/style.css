@@ -30,6 +30,9 @@ body #interface #infoInput form h1 {
 body #interface #infoInput form label {
   color: hsl(200, 24%, 40%);
 }
+body #interface #infoInput form .inputNumber::-webkit-inner-spin-button, body #interface #infoInput form .inputNumber::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
 body #interface #infoInput form .displayGrid {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -203,9 +206,6 @@ body #interface #resu #completedResu #results #repayResu {
     padding: 1rem;
     background-color: hsl(202, 86%, 94%);
   }
-  body #interface {
-    width: 50rem;
-  }
   body #interface #infoInput form #flexTittleBtnClear {
     display: flex;
     justify-content: center;
@@ -219,12 +219,10 @@ body #interface #resu #completedResu #results #repayResu {
   body #interface #infoInput form #flexTittleBtnClear #btnClearAll {
     margin: 0;
   }
-  body #interface #infoInput form #flexFieldset {
-    display: flex;
+  body #interface #infoInput form #rowFieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
-  }
-  body #interface #infoInput form #flexFieldset .flexFieldsetItem {
-    flex: 1;
   }
   body #interface #infoInput form #btnSubmit {
     justify-content: left;
@@ -239,12 +237,18 @@ body #interface #resu #completedResu #results #repayResu {
   body #interface {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 50rem;
+  }
+  body #interface #infoInput {
+    grid-column: 1/2;
+    max-width: 25rem;
   }
   body #interface #infoInput form input {
     cursor: pointer;
   }
-  body #interface #infoInput form input:hover {
-    border: 1px solid black;
+  body #interface #infoInput form .displayGrid:hover {
+    outline: 1px solid black;
+    border-radius: 0.2rem;
   }
   body #interface #infoInput form #btnClearAll {
     cursor: pointer;
@@ -252,6 +256,18 @@ body #interface #resu #completedResu #results #repayResu {
   body #interface #infoInput form #btnClearAll:hover {
     color: hsl(202, 55%, 16%);
     font-weight: bold;
+  }
+  body #interface #infoInput form #amountGrid:hover {
+    outline: 1px solid black;
+  }
+  body #interface #infoInput form #rowFieldset {
+    max-width: 25rem;
+  }
+  body #interface #infoInput form #rowFieldset #fmortgageTerm input {
+    width: 7.5rem;
+  }
+  body #interface #infoInput form #rowFieldset #fmortgageRate input {
+    width: 7.5rem;
   }
   body #interface #infoInput form #mortgageType .mortType {
     cursor: pointer;
@@ -270,5 +286,9 @@ body #interface #resu #completedResu #results #repayResu {
   }
   body #interface #resu {
     border-radius: 0 1rem 1rem 4rem;
+    grid-column: 2/3;
+  }
+  body #interface #resu .attribution {
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */

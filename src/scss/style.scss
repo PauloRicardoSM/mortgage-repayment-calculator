@@ -35,6 +35,12 @@ body {
                     color: variables.$slate700;
                 }
 
+                .inputNumber {
+                    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                    }
+                }
+
                 .displayGrid {
                     display: grid;
                     grid-template-columns: 1fr auto;
@@ -243,7 +249,7 @@ body {
         background-color: variables.$slate100;
 
         #interface {
-            width: 50rem;
+            
             #infoInput {
                 form {
                     #flexTittleBtnClear {
@@ -260,13 +266,10 @@ body {
                         }
                     }
     
-                    #flexFieldset {
-                        display: flex;
+                    #rowFieldset {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
                         gap: 1rem;
-    
-                        .flexFieldsetItem {
-                            flex: 1;
-                        }
                     }
     
                     #btnSubmit {
@@ -287,24 +290,50 @@ body {
         #interface {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            max-width: 50rem;
             
-            #infoInput {    
+            #infoInput {   
+                grid-column: 1 / 2; 
+                max-width: 25rem;
+
                 form {
                     input {
                         cursor: pointer;
                     }
 
-                    input:hover {
-                        border: 1px solid black;
+                    .displayGrid:hover {
+                        outline: 1px solid black;
+                        border-radius: .2rem;
                     }
 
+                    
                     #btnClearAll {
                         cursor: pointer;
                     }
-
+                    
                     #btnClearAll:hover {
                         color: variables.$slate900;
                         font-weight: bold;
+                    }
+                    
+                    #amountGrid:hover {
+                        outline: 1px solid black;
+                    }
+
+                    #rowFieldset {
+                        max-width: 25rem;
+
+                        #fmortgageTerm {
+                            input {
+                                width: 7.5rem;
+                            }
+                        }
+
+                        #fmortgageRate {
+                            input {
+                                width: 7.5rem;
+                            }
+                        }
                     }
 
                     #mortgageType {
@@ -333,6 +362,12 @@ body {
 
             #resu {
                 border-radius: 0 1rem 1rem 4rem;
+                grid-column: 2 / 3; 
+
+
+                .attribution {
+                    font-size: .7rem;
+                }
             }
         }
     }

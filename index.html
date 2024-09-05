@@ -28,7 +28,7 @@
           <p class="pForm">
             <label for="imortgageAmount">Mortgage Amount</label>
             <div id="amountGrid">
-              <input type="number" name="mortgageAmount" class="input" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" required>
+              <input type="number" name="mortgageAmount" class="input inputNumber" id="imortgageAmount" aria-labelledby="mortgageAmountLabel" aria-describedby="mortgageAmountError" min="0" required>
               <span id="leftSymbol">£</span>
             </div>
 
@@ -38,13 +38,13 @@
           </p>
         </fieldset>
 
-        <div id="flexFieldset">
-          <fieldset id="fmortgageTerm" class="borderHidden flexFieldsetItem">
+        <div id="rowFieldset">
+          <fieldset id="fmortgageTerm" class="borderHidden rowFieldsetItem">
             <legend class="visually-hidden" id="mortgageTermLabel">Mortgage Term</legend>
             <p>
               <label for="imortgageTerm">Mortgage Term</label>
               <div class="displayGrid">
-                <input type="number" name="mortgageTerm" class="input" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" required>
+                <input type="number" name="mortgageTerm" class="input inputNumber" id="imortgageTerm" aria-labelledby="mortgageTermLabel" aria-describedby="mortgageTermError" min="0" required>
                 <span id="sYears" class="rightSymbol">Years</span>
               </div>
               
@@ -54,12 +54,12 @@
             </p>
           </fieldset>
 
-          <fieldset id="fmortgageRate" class="borderHidden flexFieldsetItem">
+          <fieldset id="fmortgageRate" class="borderHidden rowFieldsetItem">
             <legend class="visually-hidden" id="interestRateLabel">Interest Rate</legend>
             <p class="inputSymbol">
               <label for="iinterestRate">Interest Rate</label>
               <div class="displayGrid">
-                <input type="number" name="interestRate" class="input" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" required>
+                <input type="number" name="interestRate" class="input inputNumber" id="iinterestRate" aria-labelledby="interestRateLabel" aria-describedby="interestRateError" min="0" required>
                 <span id="sPercentage" class="rightSymbol">%</span>
               </div>
 
