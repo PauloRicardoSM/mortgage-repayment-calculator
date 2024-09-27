@@ -37,7 +37,7 @@ body #interface #infoInput form .displayGrid {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto;
-  border: 1px solid hsl(200, 24%, 40%);
+  border: 1px solid hsl(203, 41%, 72%);
   border-radius: 0.2rem;
   margin-top: 0.5rem;
 }
@@ -73,7 +73,7 @@ body #interface #infoInput form #btnClearAll {
 body #interface #infoInput form #amountGrid {
   display: grid;
   grid-template-columns: auto 1fr;
-  border: 1px solid hsl(200, 24%, 40%);
+  border: 1px solid hsl(203, 41%, 72%);
   border-radius: 0.2rem;
   margin-top: 0.5rem;
 }
@@ -127,7 +127,7 @@ body #interface #infoInput form #mortgageType label {
   margin-left: 0.5rem;
 }
 body #interface #infoInput form #mortgageType .mortType {
-  border: 1px solid hsl(200, 24%, 40%);
+  border: 1px solid hsl(203, 41%, 72%);
   border-radius: 0.2rem;
   padding: 0.5rem;
   font-weight: bold;
@@ -247,8 +247,8 @@ body #interface #resu #completedResu #results #repayResu {
     cursor: pointer;
   }
   body #interface #infoInput form .displayGrid:hover {
-    outline: 1px solid black;
     border-radius: 0.2rem;
+    border-color: black;
   }
   body #interface #infoInput form #btnClearAll {
     cursor: pointer;
@@ -258,7 +258,7 @@ body #interface #resu #completedResu #results #repayResu {
     font-weight: bold;
   }
   body #interface #infoInput form #amountGrid:hover {
-    outline: 1px solid black;
+    border-color: black;
   }
   body #interface #infoInput form #rowFieldset {
     max-width: 25rem;

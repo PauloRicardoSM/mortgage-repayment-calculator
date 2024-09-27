@@ -45,7 +45,7 @@ body {
                     display: grid;
                     grid-template-columns: 1fr auto;
                     grid-template-rows: auto;
-                    border: 1px solid variables.$slate700;
+                    border: 1px solid variables.$slate300;
                     border-radius: .2rem;
                     margin-top: .5rem;
 
@@ -88,7 +88,7 @@ body {
                 #amountGrid {
                     display: grid;
                     grid-template-columns: auto 1fr;
-                    border: 1px solid variables.$slate700;
+                    border: 1px solid variables.$slate300;
                     border-radius: .2rem;
                     margin-top: .5rem;
 
@@ -151,7 +151,7 @@ body {
                     }
 
                     .mortType {
-                        border: 1px solid variables.$slate700;
+                        border: 1px solid variables.$slate300;
                         border-radius: .2rem;
                         padding: .5rem;
                         font-weight: bold;
@@ -302,8 +302,8 @@ body {
                     }
 
                     .displayGrid:hover {
-                        outline: 1px solid black;
                         border-radius: .2rem;
+                        border-color: black;
                     }
 
                     
@@ -317,7 +317,7 @@ body {
                     }
                     
                     #amountGrid:hover {
-                        outline: 1px solid black;
+                        border-color: black;
                     }
 
                     #rowFieldset {

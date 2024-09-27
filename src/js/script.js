@@ -1,17 +1,27 @@
 $(document).ready(function () {
-  // const activateHover = ['#amountgrid', '#divMortgageTerm', '#divInterestRate'];
-  // const inputNumber = ['#imortgageAmount', '#imortgageTerm', '#iinterestRate'];
+  $('.yellowHover').each(function () {
+    let $container = $(this);
+    let $input = $container.find('input');
 
-  // activateHover.forEach((selector) => {
-  //     $(selector).on('mouseenter', function() {
-  //         let allFilled = inputNumber.every((input) => $(input).val() !== '');
-  //         if (allFilled) {
-  //             gsap.to(selector, { backgroundColor: 'yellow', duration: 0.5 });
-  //         }
-  //     }).on('mouseleave', function() {
-  //         gsap.to(selector, { backgroundColor: 'blue', duration: 0.5 });
-  //     });
-  // });
+    $input.on('input', function() {
+      if($input.val()) {
+        $container.hover (
+          function() {
+            gsap.set($container, { borderColor: 'hsl(61, 70%, 52%)' });
+            gsap.set($container.find('span'), { backgroundColor: 'hsl(61, 70%, 52%)' });
+          },
+          function() {
+            gsap.set($container, { borderColor: '' });
+            gsap.set($container.find('span'), { backgroundColor: '' });
+          }
+        );
+      } else {
+        $container.off('mouseenter mouseleave');
+        gsap.set($container, { borderColor: '' });
+        gsap.set($container.find('span'), { backgroundColor: '' });
+      }
+    });
+  });
 
   $('input[type="radio"][name="mortgageType"]').change(function () {
     $('input[type="radio"][name="mortgageType"]').each(function () {
