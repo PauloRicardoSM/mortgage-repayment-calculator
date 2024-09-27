@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Click here.](https://github.com/PauloRicardoSM/mortgage-repayment-calculator)
-- Live Site URL: [Click here.](https://pauloricardosm.github.io/contact-form-main/)
+- Live Site URL: [Click here.](https://pauloricardosm.github.io/mortgage-repayment-calculator/)
 
 ## My process
 
