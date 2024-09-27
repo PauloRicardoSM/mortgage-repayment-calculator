@@ -267,7 +267,7 @@ body #interface #resu #completedResu #results #repayResu {
     width: 7.5rem;
   }
   body #interface #infoInput form #rowFieldset #fmortgageRate input {
-    width: 7.5rem;
+    width: 100%;
   }
   body #interface #infoInput form #mortgageType .mortType {
     cursor: pointer;

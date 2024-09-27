@@ -3,20 +3,21 @@ $(document).ready(function () {
     let $container = $(this);
     let $input = $container.find('input');
 
+    $container.hover(
+      function() {
+        if($input.val()) {
+          gsap.set($container, { borderColor: 'hsl(61, 70%, 52%' });
+        gsap.set($container.find('span'), { backgroundColor: 'hsl(61, 70%, 52%' }); 
+        }
+      },
+      function() {
+        gsap.set($container, { borderColor: '' });
+        gsap.set($container.find('span'), { backgroundColor: '' });
+      }
+    );
+
     $input.on('input', function() {
-      if($input.val()) {
-        $container.hover (
-          function() {
-            gsap.set($container, { borderColor: 'hsl(61, 70%, 52%)' });
-            gsap.set($container.find('span'), { backgroundColor: 'hsl(61, 70%, 52%)' });
-          },
-          function() {
-            gsap.set($container, { borderColor: '' });
-            gsap.set($container.find('span'), { backgroundColor: '' });
-          }
-        );
-      } else {
-        $container.off('mouseenter mouseleave');
+      if(!$input.val()) {
         gsap.set($container, { borderColor: '' });
         gsap.set($container.find('span'), { backgroundColor: '' });
       }
