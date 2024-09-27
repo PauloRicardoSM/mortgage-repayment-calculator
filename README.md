@@ -32,7 +32,7 @@ Users should be able to:
 
 | Mobile View | Tablets View | Desktop View |
 |:---:|:---:|:---:|
-| ![mobile-view-contct](https://github.com/PauloRicardoSM/contact-form-main/assets/135445155/0a37e829-63e9-401c-a27a-e8a5a4631074) | ![tablets-view-contact](https://github.com/PauloRicardoSM/contact-form-main/assets/135445155/b8f2a6a3-b2b8-4b0a-9857-397850db2dbf) | ![desktop-view-contact](https://github.com/PauloRicardoSM/contact-form-main/assets/135445155/e276250a-c8ac-4dd6-91c6-42fa83f8a528) |
+|  |  |  |
 
 ### Links
 
