@@ -184,6 +184,8 @@ body {
         }
 
         #resu {
+            @include mixins.flexCenter;
+            flex-direction: column;
             background-color: variables.$slate900;
             color: variables.$white;
             padding: 1rem;
@@ -282,6 +284,10 @@ body {
     
             #resu {
                 border-radius: 0 0 1rem 1rem;
+
+                p {
+                    width: 25rem;
+                }
             }
         }
     }
@@ -364,6 +370,9 @@ body {
                 border-radius: 0 1rem 1rem 4rem;
                 grid-column: 2 / 3; 
 
+                p {
+                    width: 20rem;
+                }
 
                 .attribution {
                     font-size: .7rem;

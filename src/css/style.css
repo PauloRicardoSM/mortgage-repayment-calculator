@@ -151,6 +151,10 @@ body #interface #infoInput form #btnSubmit img {
   margin-right: 0.5rem;
 }
 body #interface #resu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: hsl(202, 55%, 16%);
   color: hsl(0, 0%, 100%);
   padding: 1rem;
@@ -232,6 +236,9 @@ body #interface #resu #completedResu #results #repayResu {
   body #interface #resu {
     border-radius: 0 0 1rem 1rem;
   }
+  body #interface #resu p {
+    width: 25rem;
+  }
 }
 @media (min-width: 1024px) {
   body #interface {
@@ -287,6 +294,9 @@ body #interface #resu #completedResu #results #repayResu {
   body #interface #resu {
     border-radius: 0 1rem 1rem 4rem;
     grid-column: 2/3;
+  }
+  body #interface #resu p {
+    width: 20rem;
   }
   body #interface #resu .attribution {
     font-size: 0.7rem;
